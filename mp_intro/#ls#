@@ -1,0 +1,8 @@
+intro : intro.o main.o
+      clang++ intro.o main.o -o intro
+intro.o : intro.cpp intro.h
+	clang++ -c intro.cpp
+main.o : main.cpp
+       clang++ -c main.cpp
+clean :
+      rm *.o intro
